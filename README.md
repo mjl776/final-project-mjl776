@@ -114,3 +114,5 @@ An Example Blog with Embedded Items:
 2. [tutorial on react.js](https://www.w3schools.com/REACT/DEFAULT.ASP) 
 3. [docs on jest unit testing](https://jestjs.io/docs/tutorial-react)
 4. [docs on bootstrap] (https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+5. [tutorial on react express frontend and backend](https://www.freecodecamp.org/news/create-a-react-frontend-a-node-express-backend-and-connect-them-together-c5798926047c/)
+6. [tutorial on how to connect express app with ec2](https://gist.github.com/rmiyazaki6499/b564b40e306707c8ff6ca9c67d38fb6f?permalink_comment_id=3846281)
