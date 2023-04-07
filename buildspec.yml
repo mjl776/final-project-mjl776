@@ -10,4 +10,6 @@ phases:
 
 artifacts:
   files:
-    -frontend/**/*
+    - frontend/**/*
+    - package.json
+    - index.js
