@@ -106,6 +106,17 @@ An Example Blog with Embedded Items:
 
 ## https://github.com/nyu-csci-ua-0467-001-002-spring-2023/final-project-mjl776/blob/master/app.mjs
 
+## Milestone 2
+
+## What I have done 
+
+For milestone 2 I have done the following:
+
+- created a EC2 running instance 
+- configured a build and deploy pipeline using my ec2 instance
+- integrated next.js into my code 
+
+
 ## Annotations / References Used
 
 (__TODO__: list any tutorials/references/etc. that you've based your code off of)
@@ -121,3 +132,4 @@ An Example Blog with Embedded Items:
 9. [Roboto font Google fonts import](https://fonts.google.com/specimen/Roboto)
 10. [Routing Next.js](https://nextjs.org/docs/routing/introduction)
 11. [AWS Connection to Github](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
+12. [AWS buildspec-file](https://www.youtube.com/watch?v=yJe4ynOBzXA)
