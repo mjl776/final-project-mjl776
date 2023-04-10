@@ -13,3 +13,4 @@ artifacts:
     - frontend/**/*
     - package.json
     - index.js
+    - next.config.js
