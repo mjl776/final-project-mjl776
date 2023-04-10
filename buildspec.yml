@@ -10,7 +10,7 @@ phases:
 
 artifacts:
   files:
-    - frontend/**/*
     - package.json
-    - index.js
-    - next.config.js
+    - pages/**/*
+    - appspec.yml
+

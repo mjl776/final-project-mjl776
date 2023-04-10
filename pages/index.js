@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Nav from './frontend/pages/nav.js'
+import Nav from './nav.js'
 export default function Home() {
   return (
     <>
