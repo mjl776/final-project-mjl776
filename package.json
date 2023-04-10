@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/nyu-csci-ua-0467-001-002-spring-2023/final-project-mjl776#readme",
   "dependencies": {
-    "next": "^13.2.4",
+    "next": "^13.3.0",
     "node": "^19.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

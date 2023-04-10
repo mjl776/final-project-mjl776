@@ -1,4 +1,4 @@
-import {Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 export default function Nav() {
     return (
@@ -6,7 +6,7 @@ export default function Nav() {
         <nav className = "navbar">
             <a href = "/" className = "nav-branding"> Paradise </a>
                 <ul className = "nav-menu">
-                    <li class = "nav-item"> 
+                    <li className = "nav-item"> 
                         <a 
                             href= "/"
                             className="nav-link"
