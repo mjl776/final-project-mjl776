@@ -6,12 +6,6 @@ files:
   - source: /
     destination: /home/mjl776/server
 
-permissions:
-  - object: /
-    pattern: "**"
-    owner: mjl776
-    group: mjl776
-
 hooks:
 
   BeforeInstall:
