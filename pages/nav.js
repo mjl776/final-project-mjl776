@@ -1,6 +1,6 @@
-// import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav() { 
     return (
         <>
         <nav className = "navbar">
