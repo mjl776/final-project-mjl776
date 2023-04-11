@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
     'plugins': [
         'mocha', 
     ],
@@ -41,3 +41,4 @@ module.exports = {
         'no-console': ['off'],
     }
 };
+ */
