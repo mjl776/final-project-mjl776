@@ -4,3 +4,4 @@ auth-key-mjl776.pem
 *.swo
 *.swp
 .next
+.DS_Store
