@@ -9,16 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws-amplify": "^4.3.14",
     "dom": "^0.0.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "mocha": "^10.2.0",
     "next": "^13.2.4",
     "node": "^19.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router": "^6.10.0",
-    "react-router-dom": "^6.10.0",
-    "aws-amplify": "^4.3.14"
+    "react-router-dom": "^6.10.0"
   },
   "description": "## Overview",
   "main": "next.config.js",
