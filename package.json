@@ -22,9 +22,6 @@
     "react-router-dom": "^6.10.0"
   },
   "description": "## Overview",
-  "directories": {
-    "lib": "lib"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mjl776/final-project-mjl776.git"
