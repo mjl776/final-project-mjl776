@@ -1,7 +1,7 @@
-// import { Route, Routes } from "react-router-dom";
-import React from 'react';
-
+import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from 'react';
 export default function Nav() { 
+
     return (
         <>
         <nav className = "navbar">

@@ -133,3 +133,8 @@ For milestone 2 I have done the following:
 10. [Routing Next.js](https://nextjs.org/docs/routing/introduction)
 11. [AWS Connection to Github](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 12. [AWS buildspec-file](https://www.youtube.com/watch?v=yJe4ynOBzXA)
+13. [useEffect block](https://legacy.reactjs.org/docs/hooks-effect.html); 
+14. [next.js + mongodb](https://www.youtube.com/watch?v=mOvW3iheF14&t=397s);
+15. [Next.js + mongodb](https://www.section.io/engineering-education/build-nextjs-with-mongodb-and-deploy-on-vercel/#pagesindexjs)
+16. [Next.js + mongodb offical docs](https://www.mongodb.com/developer/languages/javascript/nextjs-with-mongodb/)
+17. [Next.js mongodb](https://stackoverflow.com/questions/69851595/aws-codebuild-node-version-update-not-working)
