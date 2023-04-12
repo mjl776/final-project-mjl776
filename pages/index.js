@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Nav from './nav.js'
 import React from 'react';
+import clientPromise from '../lib/mongo.js'
 export default function Home() {
   return (
     <>
@@ -15,3 +16,18 @@ export default function Home() {
     </>
   )
 }
+ 
+export async function getServerSideProps(context) {
+  try {
+    const client = await clientPromise;
+    console.log(client);
+    const db = await client.db();
+    const dbProps = {}
+    return {
+        props: { dbProps: JSON.parse(JSON.stringify(dbProps)) } 
+    };
+  }
+  catch(err) {
+    console.error(err);
+  }
+};
