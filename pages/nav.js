@@ -1,5 +1,4 @@
-import { Route, Routes } from "react-router-dom";
-import React, { useEffect } from 'react';
+import React from 'react';
 export default function Nav() { 
 
     return (
@@ -8,16 +7,16 @@ export default function Nav() {
             <a href = "/" className = "nav-branding"> Paradise </a>
                 <ul className = "nav-menu">
                     <li className = "nav-item"> 
-                        <a 
-                            href= "/"
+                        <a
+                            to= "/"
                             className="nav-link"
                         >
                             Home 
                         </a>                       
                     </li>
                     <li className = "nav-item"> 
-                        <a 
-                            href= "/about"
+                        <a
+                            to= "/about"
                             className = "nav-link"
                         >
                             About 
@@ -25,7 +24,7 @@ export default function Nav() {
                     </li>
                     <li className = "nav-item"> 
                         <a 
-                            href= "/work"
+                            to= "/work"
                             className ="nav-link"
                         >
                             Work 
