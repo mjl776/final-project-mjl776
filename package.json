@@ -18,8 +18,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router": "^6.10.0",
-    "react-router-dom": "^6.10.0",
-    "vercel": "^28.18.5"
+    "react-router-dom": "^6.10.0"
   },
   "description": "## Overview",
   "repository": {
