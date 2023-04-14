@@ -138,3 +138,4 @@ For milestone 2 I have done the following:
 15. [Next.js + mongodb](https://www.section.io/engineering-education/build-nextjs-with-mongodb-and-deploy-on-vercel/#pagesindexjs)
 16. [Next.js + mongodb offical docs](https://www.mongodb.com/developer/languages/javascript/nextjs-with-mongodb/)
 17. [Next.js mongodb](https://stackoverflow.com/questions/69851595/aws-codebuild-node-version-update-not-working)
+18. [MongoDB + vercel](https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/)
