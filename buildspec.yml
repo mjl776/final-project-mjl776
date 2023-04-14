@@ -3,11 +3,9 @@ version: 0.2
 phases:
   pre_build: 
     commands:
-      - nvm use $VERSION_NODE_16
       - npm install 
   build:
     commands: 
-      - nvm use $VERSION_NODE_16
       - npm run build
 
 artifacts:
