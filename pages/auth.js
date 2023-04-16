@@ -2,13 +2,14 @@ import authentication from "../firebase/firebase"
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { createUserWithEmailAndPassword } from "firebase/auth"
+import * as path from "path";
 
 export default function Auth() {
 
     const [getUsername, setUsername] = useState("");
     const [getPassword, setPassword] = useState("");
     const [getEmail, setEmail] = useState("");
-
+    const fullPath = path.join(`${process.env.PUBLIC_URL}`, "/", "api/signUpUser");
     // response variable for post request for users insert into db
     let response = null; 
     const router = useRouter()
@@ -21,7 +22,7 @@ export default function Auth() {
                 getEmail,
                 getPassword
             ).then(async ()=> {
-                response = await fetch(process.env.PUBLIC_URL, {
+                response = await fetch(fullPath, {
                     method: "POST",
                     body: JSON.stringify({
                         getEmail,
