@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React from 'react';
-import Nav from '../components/nav.js'
 
 export default function Home() {
   return (

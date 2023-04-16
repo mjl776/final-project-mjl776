@@ -33,7 +33,6 @@ export default function Auth() {
                 })
                 response = await response.json();
             }).then(() =>{
-                console.log(response);
                 router.push('/');
             });
         }
