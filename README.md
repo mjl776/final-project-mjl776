@@ -143,3 +143,5 @@ For milestone 2 I have done the following:
 17. [Next.js mongodb](https://stackoverflow.com/questions/69851595/aws-codebuild-node-version-update-not-working)
 18. [MongoDB + vercel](https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/)
 19. [Routing for next.js](https://nextjs.org/docs/routing/introduction)
+20. [Login form render](https://github.com/vercel/next.js/blob/canary/examples/with-passport/components/form.js)
+21. [Firebase auth](https://firebase.google.com/docs/auth)
