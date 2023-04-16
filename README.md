@@ -145,3 +145,5 @@ For milestone 2 I have done the following:
 19. [Routing for next.js](https://nextjs.org/docs/routing/introduction)
 20. [Login form render](https://github.com/vercel/next.js/blob/canary/examples/with-passport/components/form.js)
 21. [Firebase auth](https://firebase.google.com/docs/auth)
+22. [Auth0 authentication nextjs](https://www.youtube.com/watch?v=yufqeJLP1rI)
+23. [Firebase auth](https://www.youtube.com/watch?v=BQrE98bP6m4)
