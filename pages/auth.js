@@ -2,7 +2,6 @@ import authentication from "../firebase/firebase"
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import * as path from "path";
 
 export default function Auth() {
 
