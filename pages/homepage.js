@@ -5,7 +5,7 @@ import clientPromise from '../lib/mongo.js'
 
 export default function HomePage() {
     const router = useRouter()
-
+    
     return (
         <div className = "container">
             <Nav></Nav>
