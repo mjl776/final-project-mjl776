@@ -116,6 +116,9 @@ For milestone 2 I have done the following:
 - configured a build and deploy pipeline using my ec2 instance
 - integrated next.js into my code 
 
+## Milestone 3
+
+##
 
 ## Annotations / References Used
 
@@ -139,3 +142,4 @@ For milestone 2 I have done the following:
 16. [Next.js + mongodb offical docs](https://www.mongodb.com/developer/languages/javascript/nextjs-with-mongodb/)
 17. [Next.js mongodb](https://stackoverflow.com/questions/69851595/aws-codebuild-node-version-update-not-working)
 18. [MongoDB + vercel](https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/)
+19. [Routing for next.js](https://nextjs.org/docs/routing/introduction)

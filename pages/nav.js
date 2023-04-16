@@ -1,38 +1,36 @@
 import React from 'react';
+import Link from 'next/link'
 export default function Nav() { 
 
     return (
-        <>
         <nav className = "navbar">
             <a href = "/" className = "nav-branding"> Paradise </a>
                 <ul className = "nav-menu">
                     <li className = "nav-item"> 
-                        <a
-                            to= "/"
+                        <Link
+                            href= "/"
                             className="nav-link"
                         >
                             Home 
-                        </a>                       
+                        </Link>                       
                     </li>
                     <li className = "nav-item"> 
-                        <a
-                            to= "/about"
+                        <Link
+                            href= "/about"
                             className = "nav-link"
                         >
                             About 
-                        </a>  
+                        </Link>  
                     </li>
                     <li className = "nav-item"> 
-                        <a 
-                            to= "/work"
+                        <Link
+                            href= "/auth"
                             className ="nav-link"
                         >
-                            Work 
-                        </a> 
+                            Sign Up 
+                        </Link> 
                     </li>
                 </ul>
         </nav>
-        
-        </>
     )
 }
