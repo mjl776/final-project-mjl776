@@ -150,3 +150,5 @@ For milestone 2 I have done the following:
 24. [Navbar help](https://github.com/CodeWithMarish/responsive-navbar/blob/main/styles/globals.css)
 25. [Public URL env variable](https://dev.to/n1ru4l/configure-the-cra-public-url-post-build-with-node-js-and-express-4n8)
 26. [submit form debugging](https://daily-dev-tips.com/posts/using-forms-in-nextjs/)
+27. [mongoose connect with mongodb](https://jasonwatmore.com/next-js-11-mongodb-connect-to-mongo-database-with-mongoose)
+28. [CORS policy nextjs]()
