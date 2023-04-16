@@ -147,3 +147,6 @@ For milestone 2 I have done the following:
 21. [Firebase auth](https://firebase.google.com/docs/auth)
 22. [Auth0 authentication nextjs](https://www.youtube.com/watch?v=yufqeJLP1rI)
 23. [Firebase auth](https://www.youtube.com/watch?v=BQrE98bP6m4)
+24. [Navbar help](https://github.com/CodeWithMarish/responsive-navbar/blob/main/styles/globals.css)
+25. [Public URL env variable](https://dev.to/n1ru4l/configure-the-cra-public-url-post-build-with-node-js-and-express-4n8)
+26. [submit form debugging](https://daily-dev-tips.com/posts/using-forms-in-nextjs/)
