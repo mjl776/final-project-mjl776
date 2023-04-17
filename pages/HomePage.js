@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/router"
-import { app } from "../firebase/firebase"
+import app from "../firebase/firebase"
+
 export default function HomePage() {
     const [user, setUser] = useState({});
     const router = useRouter()
