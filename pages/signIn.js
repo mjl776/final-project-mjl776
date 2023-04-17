@@ -1,15 +1,16 @@
 import { useState } from "react"
 import { useRouter } from 'next/router'
-import { auth } from "../firebase/firebase"
+import { authentication } from "../firebase/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth"
 export default function SignIn() {
 
     const [getEmail, setEmail] = useState("");
     const [getPassword, setPassword] = useState("");
+    const router = userRouter();
 
     async function authenticate () {
         const user = await signInWithEmailAndPassword(
-            auth,
+            authentication,
             getEmail,
             getPassword
         ).then(() => {
