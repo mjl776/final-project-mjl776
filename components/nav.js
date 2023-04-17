@@ -1,7 +1,34 @@
 import React from 'react';
 import Link from 'next/link'
+import { onAuthStateChanged, signOut } from "firebase/auth"
+import { useState, useEffect } from "react"
+import { useRouter } from 'next/router'
+import auth from '../firebase/firebase'
 export default function Nav() { 
-    return (
+    const router = useRouter()
+    const [user, setUser] = useState({});
+    
+    useEffect(() => {
+        if (auth.auth.currentUser == null) {
+            setUser(null); 
+        }
+        else {
+            setUser(auth.auth.currentUser)
+        }
+    });
+
+    function userOut () {
+        signOut(auth).then(() => {
+            // Sign-out successful
+        }).catch((error) => {
+            // An error happened.
+            console.log(error);
+        }).then(() => {
+            router.push('/');
+       })
+    }
+
+   return (
         <nav className = "navbar">
             <a href = "/" className = "nav-branding"> Paradise </a>
                 <ul className = "nav-menu">
@@ -21,14 +48,27 @@ export default function Nav() {
                             About 
                         </Link>  
                     </li>
-                    <li className = "nav-item"> 
-                        <Link
-                            href= "/auth"
-                            className ="nav-link"
-                        >
-                            Sign Up 
-                        </Link> 
-                    </li>
+                    { !user ?
+                        <li className = "nav-item"> 
+                            <Link
+                                href= "/authentication"
+                                className ="nav-link"
+                            >
+                                Sign Up 
+                            </Link> 
+                        </li> 
+                    : (
+                        <li className = "nav-item"> 
+                            <Link
+                                href= "/auth"
+                                className ="nav-link"
+                                onClick= { userOut }
+                            >
+                                Sign Out 
+                            </Link> 
+                        </li>   
+                    )
+                    }   
                 </ul>
         </nav>
     )
