@@ -1,5 +1,4 @@
-import { authentication as auth} from '../firebase/firebase'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/router"
 
