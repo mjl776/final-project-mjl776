@@ -1,15 +1,24 @@
-import authentication from "../firebase/firebase"
-import { useState } from "react"
+import auth from "../firebase/firebase"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from "firebase/auth"
+import { createUserWithEmailAndPassword } from "firebase/auth"
 
 export default function Auth() {
-
-    const [user, setUser] = useState({});
 
     const [getUsername, setUsername] = useState("");
     const [getPassword, setPassword] = useState("");
     const [getEmail, setEmail] = useState("");
+    const [user, setUser] = useState({});
+    
+    useEffect(() => {
+        if (auth.auth.currentUser == null) {
+            setUser(null); 
+        }
+        else {
+            setUser(auth.auth.currentUser)
+        }
+    });
+
     // response variable for post request for users insert into db
     let response = null; 
     const router = useRouter()

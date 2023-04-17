@@ -1,25 +1,23 @@
 import React from 'react';
 import Link from 'next/link'
-import { onAuthStateChanged, signOut, getAuth } from "firebase/auth"
-import { useState } from "react"
+import { onAuthStateChanged, signOut } from "firebase/auth"
+import { useState, useEffect } from "react"
 import { useRouter } from 'next/router'
-
+import auth from '../firebase/firebase'
 export default function Nav() { 
     const router = useRouter()
     const [user, setUser] = useState({});
-    const auth = getAuth();
-
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-          setUser(user);
-      } else {
-        // User is signed out
-        // ...
-        setUser(null);
-      }
+    
+    useEffect(() => {
+        if (auth.auth.currentUser == null) {
+            setUser(null); 
+        }
+        else {
+            setUser(auth.auth.currentUser)
+        }
     });
 
-   function userOut () {
+    function userOut () {
         signOut(auth).then(() => {
             // Sign-out successful
         }).catch((error) => {
@@ -28,7 +26,7 @@ export default function Nav() {
         }).then(() => {
             router.push('/');
        })
-   }
+    }
 
    return (
         <nav className = "navbar">
@@ -53,7 +51,7 @@ export default function Nav() {
                     { !user ?
                         <li className = "nav-item"> 
                             <Link
-                                href= "/auth"
+                                href= "/authentication"
                                 className ="nav-link"
                             >
                                 Sign Up 

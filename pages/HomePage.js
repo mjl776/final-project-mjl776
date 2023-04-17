@@ -1,21 +1,19 @@
-import { useState } from "react"
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useState, useEffect } from "react"
+import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/router"
-import app from "../firebase/firebase"
+import auth from "../firebase/firebase"
 
 export default function HomePage() {
     const [user, setUser] = useState({});
     const router = useRouter()
-
-    const auth = getAuth(app);
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-          setUser(user);
-      } else {
-        // User is signed out
-        // ...
-        setUser(null);
-      }
+    
+    useEffect(() => {
+        if (auth.auth.currentUser == null) {
+            setUser(null); 
+        }
+        else {
+            setUser(auth.auth.currentUser)
+        }
     });
 
     async function signIn() {
