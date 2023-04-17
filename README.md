@@ -151,6 +151,6 @@ For milestone 2 I have done the following:
 25. [Public URL env variable](https://dev.to/n1ru4l/configure-the-cra-public-url-post-build-with-node-js-and-express-4n8)
 26. [submit form debugging](https://daily-dev-tips.com/posts/using-forms-in-nextjs/)
 27. [mongoose connect with mongodb](https://jasonwatmore.com/next-js-11-mongodb-connect-to-mongo-database-with-mongoose)
-28. [CORS policy nextjs]()
+28. [CORS policy nextjs NOTE: I lost the url but was within this section](https://nextjs.org/docs/advanced-features/security-headers)
 29. [Showing pages based on auth state](https://stackoverflow.com/questions/74357551/nextjs-routing-in-react-render-a-page-if-the-user-is-authenticated);
 30. [useEffect blocks use case](https://stackoverflow.com/questions/65216193/blocking-vs-non-blocking-effects-in-react-does-useeffect-run-asynchronously-imp)
