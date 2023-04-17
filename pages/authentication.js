@@ -27,7 +27,7 @@ export default function Auth() {
         event.preventDefault();
         try {
             const user = await createUserWithEmailAndPassword(
-                authentication,
+                auth,
                 getEmail,
                 getPassword
             ).then(async () => {
