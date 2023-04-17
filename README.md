@@ -152,3 +152,5 @@ For milestone 2 I have done the following:
 26. [submit form debugging](https://daily-dev-tips.com/posts/using-forms-in-nextjs/)
 27. [mongoose connect with mongodb](https://jasonwatmore.com/next-js-11-mongodb-connect-to-mongo-database-with-mongoose)
 28. [CORS policy nextjs]()
+29. [Showing pages based on auth state](https://stackoverflow.com/questions/74357551/nextjs-routing-in-react-render-a-page-if-the-user-is-authenticated);
+30. [useEffect blocks use case](https://stackoverflow.com/questions/65216193/blocking-vs-non-blocking-effects-in-react-does-useeffect-run-asynchronously-imp)
