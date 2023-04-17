@@ -118,7 +118,42 @@ For milestone 2 I have done the following:
 
 ## Milestone 3
 
-##
+## What I have done (research)
+
+For my milestone 3, I was mainly doing a lot of research and refinement on my project in the following areas:
+
+- EC2 Deployment, AWS Amplify deployment and Vercel Deployment (Where I suceeeded)
+
+- MongoDB 
+
+- Firebase Auth 
+
+- I added citations for all the research and articles I read when researching these topics and discussed with Professor Versoza about these research topics for AWS
+
+- The EC2 deployment configuration files are also still present within my repo 
+
+## What form(s) I made for part 2
+
+I made a Sign-up and Sign-in form for users to authenticate into my website. For the final project milestone, I plan to have the blogs users post visible on the deployed website itself. 
+
+
+## Scope of my project
+
+Nothing has changed in plans for the scope of my project
+
+## Brief Description of Frontend and backend
+
+Frontend: Next.js with Vercel Deployment 
+
+Backend:
+
+ MongoDB to store auth user data and also data for website
+  - The specific auth data it stores is the user's username, email, and ID created when the data is posted to the 
+  DB
+
+Firebase Auth:
+  - Stores the User's email and password hash used to authenticate
+
 
 ## Annotations / References Used
 
