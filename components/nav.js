@@ -9,11 +9,11 @@ export default function Nav() {
     const [user, setUser] = useState({});
     
     useEffect(() => {
-        if (auth.auth.currentUser == null) {
+        if (auth.currentUser == null) {
             setUser(null); 
         }
         else {
-            setUser(auth.auth.currentUser)
+            setUser(auth.currentUser)
         }
     });
 

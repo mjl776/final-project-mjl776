@@ -9,19 +9,19 @@ export default function Auth() {
     const [getPassword, setPassword] = useState("");
     const [getEmail, setEmail] = useState("");
     const [user, setUser] = useState({});
-    
-    useEffect(() => {
-        if (auth.auth.currentUser == null) {
-            setUser(null); 
-        }
-        else {
-            setUser(auth.auth.currentUser)
-        }
-    });
 
     // response variable for post request for users insert into db
     let response = null; 
     const router = useRouter()
+
+    useEffect(() => {
+        if (auth.currentUser == null) {
+            setUser(null); 
+        }
+        else {
+            setUser(auth.currentUser)
+        }
+    });
 
     async function signUp(event) {
         event.preventDefault();

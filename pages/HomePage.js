@@ -8,11 +8,12 @@ export default function HomePage() {
     const router = useRouter()
     
     useEffect(() => {
-        if (auth.auth.currentUser == null) {
+        if (auth.currentUser == null) {
             setUser(null); 
         }
         else {
-            setUser(auth.auth.currentUser)
+            setUser(auth.currentUser)
+            console.log(user);
         }
     });
 
