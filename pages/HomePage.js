@@ -13,7 +13,6 @@ export default function HomePage() {
         }
         else {
             setUser(auth.currentUser)
-            console.log(user);
         }
     });
 
