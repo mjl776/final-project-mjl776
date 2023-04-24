@@ -2,10 +2,6 @@
 
 const nextConfig = {
   reactStrictMode: true,
-}
-
-module.exports = {
-  nextConfig,
   async headers() {
     return [
       {
@@ -25,7 +21,9 @@ module.exports = {
     config.experiments = { ...config.experiments, topLevelAwait: true }
     return config
   },
-};
+}
+
+module.exports =nextConfig;
 
 
 
