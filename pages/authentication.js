@@ -2,7 +2,7 @@ import auth from "../firebase/firebase"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-
+import styles from "../styles/auth.module.css"
 export default function Auth() {
 
     const [getUsername, setUsername] = useState("");
@@ -53,29 +53,27 @@ export default function Auth() {
     }
 
     return (
-        <div className = "container">
-            <div className = "form-container">
-                { 
-                <form onSubmit={signUp}>
-                    <div className="sign-up-form">Sign Up form</div>
-                    <input type="text" placeholder = "Username..."
-                    onChange={(evt)=>{
-                        setUsername(evt.target.value); 
-                    }}></input>
-                    <input type="text" placeholder = "Password..."
-                    onChange={(evt)=>{
-                        setPassword(evt.target.value); 
-                    }}></input>
-                    <br/>
-                    <input type="text" placeholder = "Email..."
-                    onChange={(evt)=>{
-                        setEmail(evt.target.value); 
-                    }}></input>
-                    <br/>
-                    <input type="submit" value="Sign Up"/>
-                </form>
-                }   
-            </div>
+        <div className = { styles["form-container"] }>
+            { 
+            <form onSubmit={signUp}>
+                <div className={ styles['sign-up-form'] }>Sign Up form</div>
+                <input type="text" placeholder = "Username..."
+                onChange={(evt)=>{
+                    setUsername(evt.target.value); 
+                }}></input>
+                <input type="text" placeholder = "Password..."
+                onChange={(evt)=>{
+                    setPassword(evt.target.value); 
+                }}></input>
+                <br/>
+                <input type="text" placeholder = "Email..."
+                onChange={(evt)=>{
+                    setEmail(evt.target.value); 
+                }}></input>
+                <br/>
+                <input type="submit" value="Sign Up"/>
+            </form>
+            }   
         </div>
     )
 }

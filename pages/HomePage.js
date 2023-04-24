@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/router"
 import auth from "../firebase/firebase"
+import styles from '../styles/homepage.module.css'
 
 export default function HomePage() {
     const [user, setUser] = useState({});
@@ -21,9 +22,9 @@ export default function HomePage() {
     }
 
     return (
-        <div className="container">
+        <div>
             { !user ?
-                <div className="welcome-text">
+                <div className={ styles['welcome-text'] }>
                     Hello welcome to the Paradise travel site! Please sign in or sign up! 
                     <div>
                         <button onClick= {signIn}>
@@ -32,7 +33,7 @@ export default function HomePage() {
                     </div>  
                 </div> 
                 : (
-                    <div className = "posts">
+                    <div className={ styles.posts }>
                         Here are the Travel Blog Posts for today!  
                     </div>
                 )}

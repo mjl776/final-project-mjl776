@@ -189,3 +189,4 @@ Firebase Auth:
 28. [CORS policy nextjs NOTE: I lost the url but was within this section](https://nextjs.org/docs/advanced-features/security-headers)
 29. [Showing pages based on auth state](https://stackoverflow.com/questions/74357551/nextjs-routing-in-react-render-a-page-if-the-user-is-authenticated);
 30. [useEffect blocks use case](https://stackoverflow.com/questions/65216193/blocking-vs-non-blocking-effects-in-react-does-useeffect-run-asynchronously-imp)
+31. [Component level CSS nextjs](https://github.com/iamshaunjp/nextjs-tutorial/blob/lesson-12/pages/_app.js)
