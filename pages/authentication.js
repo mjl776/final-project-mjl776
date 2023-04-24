@@ -42,8 +42,9 @@ export default function Auth() {
                     "Content-Type": "application/json",
                     },
                 })
+                console.log(response);
                 response = await response.json();
-            }).then(() =>{
+            }).then(() => {
                 router.push('/');
             });
         }
