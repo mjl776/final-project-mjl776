@@ -4,6 +4,8 @@ import { onAuthStateChanged, signOut } from "firebase/auth"
 import { useState, useEffect } from "react"
 import { useRouter } from 'next/router'
 import auth from '../firebase/firebase'
+import styles from "../styles/nav.module.css"
+
 export default function Nav() { 
     const router = useRouter()
     const [user, setUser] = useState({});
@@ -29,10 +31,10 @@ export default function Nav() {
     }
 
    return (
-        <nav className = "navbar">
-            <a href = "/" className = "nav-branding"> Paradise </a>
-                <ul className = "nav-menu">
-                    <li className = "nav-item"> 
+        <nav className = { styles['nav-bar'] }>
+            <a href = "/" className = { styles['nav-branding'] }> Paradise </a>
+                <ul className = { styles['nav-menu'] }>
+                    <li className = { styles['nav-item'] }> 
                         <Link
                             href= "/"
                             className="nav-link"
@@ -40,7 +42,7 @@ export default function Nav() {
                             Home 
                         </Link>                       
                     </li>
-                    <li className = "nav-item"> 
+                    <li className = { styles['nav-item'] }> 
                         <Link
                             href= "/about"
                             className = "nav-link"
@@ -49,7 +51,7 @@ export default function Nav() {
                         </Link>  
                     </li>
                     { !user ?
-                        <li className = "nav-item"> 
+                        <li className = { styles['nav-item'] }> 
                             <Link
                                 href= "/authentication"
                                 className ="nav-link"
@@ -58,7 +60,7 @@ export default function Nav() {
                             </Link> 
                         </li> 
                     : (
-                        <li className = "nav-item"> 
+                        <li className = { styles['nav-item'] }> 
                             <Link
                                 href= "/auth"
                                 className ="nav-link"
