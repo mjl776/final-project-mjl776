@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import styles from "../styles/auth.module.css"
+
 export default function Auth() {
 
     const [getUsername, setUsername] = useState("");
