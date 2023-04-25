@@ -1,4 +1,3 @@
-
 import clientPromise from '../../lib/mongo.js'
 
 export default async function signUpFunction (req, res) {
