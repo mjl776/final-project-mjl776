@@ -1,0 +1,13 @@
+
+.post-container {
+    padding: 30px;
+}
+
+.row {
+    display: grid;
+    justify-content: center;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 12px;
+}
+

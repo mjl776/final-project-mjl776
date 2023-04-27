@@ -22,7 +22,6 @@ export default function Nav() {
         signOut(auth).then(() => {
             // Sign-out successful
         }).catch((error) => {
-            // An error happened.
             console.log(error);
         }).then(() => {
             router.push('/');
