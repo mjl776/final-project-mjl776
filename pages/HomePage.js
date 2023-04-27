@@ -1,7 +1,6 @@
 import { useRouter } from "next/router"
 import styles from '../styles/homepage.module.css'
 import authHandler from "../hooks/authHandler"
-import style from "../styles/showPosts.module.css"
 
 export default function HomePage() {
     const router = useRouter()
