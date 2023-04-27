@@ -1,11 +1,9 @@
 import styles from "../styles/createPost.module.css"
 import { useState, useEffect } from "react"
-import auth from "../firebase/firebase";
 import authHandler from "../hooks/authHandler"
 import { useRouter } from "next/router"
 
 export default function createPost() {
-
 
     let email = null;
     const [getBlogPostName, setBlogPostName] = useState("");
@@ -17,6 +15,7 @@ export default function createPost() {
     if (authHandlerObj.user && authHandlerObj.loading == false) {
         email = authHandlerObj.user.email;
     }
+
     async function postCreation(event) {
         event.preventDefault();
         try {
@@ -33,7 +32,7 @@ export default function createPost() {
                 },
             })
             data = await data.json();
-            router.push("/");
+            router.push("/showPosts");
         }
         catch (err) {
             console.log(err);

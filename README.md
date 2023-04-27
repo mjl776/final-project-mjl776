@@ -194,3 +194,8 @@ Firebase Auth:
 33. [Finding objects in mongoDB](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)
 34. [Global Authentication](https://egghead.io/lessonsnext-js-make-user-state-globally-accessible-in-next-js-with-react-context-and-providers)
 35. [Global Authentication solution](https://stackoverflow.com/questions/67410324/next-js-with-firebase-onauthstatechanged);
+36. [All documents in mongoDB](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/mongodb/mongodb-quiz.md)
+37. [All documents in Col, Row](https://getbootstrap.com/docs/4.0/layout/grid/)
+38. [BootStrap] (https://stackoverflow.com/questions/55288819/container-row-col-in-react-bootstrap-not-working);
+39. [Border-box](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+

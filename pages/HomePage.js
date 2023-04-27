@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import styles from '../styles/homepage.module.css'
 import authHandler from "../hooks/authHandler"
-
+import style from "../styles/showPosts.module.css"
 
 export default function HomePage() {
     const router = useRouter()
@@ -20,6 +20,10 @@ export default function HomePage() {
         router.push('/createPost')
     }
 
+    async function showPosts() {
+        router.push("/showPosts");
+    }
+
     return (
         <div>
             { !user ?
@@ -28,6 +32,9 @@ export default function HomePage() {
                     <div>
                         <button onClick= {signIn}>
                             Sign In
+                        </button>
+                        <button onClick= { showPosts }>
+                            See Travel Posts
                         </button>
                     </div>  
                 </div> 
@@ -39,9 +46,11 @@ export default function HomePage() {
                         <div>
                             Here are the Travel Blog Posts for today!  
                         </div>
+                        <button onClick= { showPosts }>
+                            See Posts
+                        </button>
                     </div>
-                )}
+            )}
         </div>
     );
 }
-
