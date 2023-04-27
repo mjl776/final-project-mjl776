@@ -192,3 +192,5 @@ Firebase Auth:
 31. [Component level CSS nextjs](https://github.com/iamshaunjp/nextjs-tutorial/blob/lesson-12/pages/_app.js)
 32. [Top-Level-Await-workaround](https://github.com/vercel/next.js/issues/43382);
 33. [Finding objects in mongoDB](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)
+34. [Global Authentication](https://egghead.io/lessonsnext-js-make-user-state-globally-accessible-in-next-js-with-react-context-and-providers)
+35. [Global Authentication solution](https://stackoverflow.com/questions/67410324/next-js-with-firebase-onauthstatechanged);

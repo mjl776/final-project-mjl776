@@ -1,26 +1,63 @@
 import styles from "../styles/createPost.module.css"
 import { useState, useEffect } from "react"
 import auth from "../firebase/firebase";
+import authHandler from "../hooks/authHandler"
+import { useRouter } from "next/router"
 
-export async function getServerSideProps() {
-    const data = await fetch("http://localhost:3000/api/getUser");
-    return { props: { user: JSON.parse(JSON.stringify(data)) } };
-}
+export default function createPost() {
 
-export default function createPost({ user }) {
-    const [getUser, setUser] = useState("");
-    const [getUserName, setUserName] = useState("");
+
+    let email = null;
     const [getBlogPostName, setBlogPostName] = useState("");
-    console.log(user);
+    const [getBlogText, setBlogText] = useState("");
+    const router = useRouter();
+    const authHandlerObj = authHandler();
+    let data; 
+
+    if (authHandlerObj.user && authHandlerObj.loading == false) {
+        email = authHandlerObj.user.email;
+    }
+    async function postCreation(event) {
+        event.preventDefault();
+        try {
+            data = await fetch("http://localhost:3000/api/postCreation", {
+                method: "POST",
+                body: JSON.stringify({
+                    getBlogPostName,
+                    getBlogText,
+                    email 
+                }),
+                headers: {
+                Accept: "application/json, text/plain, */*", 
+                "Content-Type": "application/json",
+                },
+            })
+            data = await data.json();
+            router.push("/");
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
     return (
         <div className = { styles["post-form-container"] }>
-            <input type="text" placeholder = "Blog Post Name..."
-                onChange={(evt)=>{
-                    setBlogPostName(evt.target.value); 
-                }}></input>
-            <div> 
-                
-            </div>
+            <form onSubmit={ postCreation }>
+                <div>
+                    <input type="text" placeholder = "Blog Post Name..."
+                        onChange={(evt)=>{
+                            setBlogPostName(evt.target.value); 
+                        }}></input>
+                </div>
+                <div>
+                    <textarea type="text" placeholder = "Blog text..."
+                        onChange={(evt)=>{
+                            setBlogText(evt.target.value); 
+                    }}></textarea> 
+                </div>
+                <br/>
+                <input type="submit" value="Submit Post"/>
+            </form>
         </div>
-    )
+    );
 }
