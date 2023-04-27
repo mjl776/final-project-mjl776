@@ -155,6 +155,41 @@ Firebase Auth:
   - Stores the User's email and password hash used to authenticate
 
 
+## Milestone 4:
+
+## What I have done 
+ 
+ - From the previous iteration I have added the following: 
+
+    - A show blogs page that shows the title, text and user of each blog post 
+    - A create blogs page that allows a user to create a blog
+
+## System Architecture of my website
+
+Frontend: 
+
+Next.js 
+
+Backend: 
+
+MongoDB 
+- for data storage
+
+Authentication: 
+
+Firebase Authentication 
+- for storing senstive user auth data 
+
+## How the frontend and backend interact per each form: 
+
+- Sign up page: 
+
+  When a User signs up and enters their information, a post request is made to the firebase authenication API endpoinn and after that a post request is then triggered to the MongoDB API endpoint where all the non-sensitive information of the user is stored
+
+- Create Post Page 
+
+  When a User is authenticated, a create post page button is availible where users can click on and direct them to a form where they are able to create a post. When a user enters the post information, a API request is triggered to the mongoDB API endpoint, where the users object id and username is stored for reference 
+
 ## Annotations / References Used
 
 (__TODO__: list any tutorials/references/etc. that you've based your code off of)

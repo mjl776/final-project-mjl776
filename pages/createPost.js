@@ -41,6 +41,7 @@ export default function createPost() {
 
     return (
         <div className = { styles["post-form-container"] }>
+            <div className = { styles["title"] }> Blog Posts Page</div>
             <form onSubmit={ postCreation }>
                 <div>
                     <input type="text" placeholder = "Blog Post Name..."
