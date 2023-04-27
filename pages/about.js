@@ -1,4 +1,4 @@
-
+import styles from "../styles/about.module.css"
 
 export default function About() {
 
@@ -7,5 +7,5 @@ export default function About() {
             Welcome to the Paradise website! A blog posting site
         </div>
     )
-    
+
   }
