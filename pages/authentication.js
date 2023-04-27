@@ -23,7 +23,7 @@ export default function Auth() {
                 getEmail,
                 getPassword
             ).then(async () => {
-                response = await fetch("http://localhost:3000/api/signUpUser", {
+                response = await fetch("https://final-project-mjl776.vercel.app/api/signUpUser", {
                     method: "POST",
                     body: JSON.stringify({
                         getEmail,

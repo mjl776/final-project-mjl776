@@ -20,7 +20,7 @@ export default function createPost() {
     async function postCreation(event) {
         event.preventDefault();
         try {
-            data = await fetch("http://localhost:3000/api/postCreation", {
+            data = await fetch("https://final-project-mjl776.vercel.app//api/postCreation", {
                 method: "POST",
                 body: JSON.stringify({
                     getBlogPostName,
