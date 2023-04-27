@@ -1,24 +1,23 @@
-import { useState, useEffect } from "react"
-import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/router"
-import auth from "../firebase/firebase"
 import styles from '../styles/homepage.module.css'
+import authHandler from "../hooks/authHandler"
+
 
 export default function HomePage() {
-    const [user, setUser] = useState({});
     const router = useRouter()
-    
-    useEffect(() => {
-        if (auth.currentUser == null) {
-            setUser(null); 
-        }
-        else {
-            setUser(auth.currentUser)
-        }
-    });
+    let auth = authHandler();
+    let user = null;
+
+    if (auth.user && auth.loading == false) {
+        user = auth.user;
+    }
 
     async function signIn() {
         router.push('/signIn')
+    }
+
+    async function createPost() {
+        router.push('/createPost')
     }
 
     return (
@@ -34,7 +33,12 @@ export default function HomePage() {
                 </div> 
                 : (
                     <div className={ styles.posts }>
-                        Here are the Travel Blog Posts for today!  
+                        <button onClick= { createPost }>
+                            Add post
+                        </button>
+                        <div>
+                            Here are the Travel Blog Posts for today!  
+                        </div>
                     </div>
                 )}
         </div>
