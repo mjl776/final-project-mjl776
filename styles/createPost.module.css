@@ -2,3 +2,9 @@
 .post-form-container {
     text-align: center;
 }
+
+.title {
+    font-size: 30px;
+    color: navy;
+    padding: 20px;
+}

@@ -5,6 +5,7 @@ export default function ShowPosts({ posts }) {
     return (
         
         <div>  
+        <div className = { styles["title"] }> Blog Posts Page</div>
         {
         posts.map((post, index) => 
         <div className = { styles["post-container"] } onClick=""> 
@@ -12,6 +13,9 @@ export default function ShowPosts({ posts }) {
                 <Col>
                     <div>
                         { post.postTitle }
+                    </div>
+                    <div>
+                        { post.postText }
                     </div>
                     <div>
                         by { post.username }
