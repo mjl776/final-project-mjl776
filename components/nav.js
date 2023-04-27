@@ -10,12 +10,11 @@ export default function Nav() {
     const router = useRouter()
     const [user, setUser] = useState({});
     
-    useEffect(() => {
-        if (auth.currentUser == null) {
-            setUser(null); 
-        }
-        else {
-            setUser(auth.currentUser)
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUser(user);
+        } else {
+            setUser(null);
         }
     });
 

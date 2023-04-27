@@ -191,3 +191,4 @@ Firebase Auth:
 30. [useEffect blocks use case](https://stackoverflow.com/questions/65216193/blocking-vs-non-blocking-effects-in-react-does-useeffect-run-asynchronously-imp)
 31. [Component level CSS nextjs](https://github.com/iamshaunjp/nextjs-tutorial/blob/lesson-12/pages/_app.js)
 32. [Top-Level-Await-workaround](https://github.com/vercel/next.js/issues/43382);
+33. [Finding objects in mongoDB](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)

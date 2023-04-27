@@ -8,17 +8,20 @@ export default function HomePage() {
     const [user, setUser] = useState({});
     const router = useRouter()
     
-    useEffect(() => {
-        if (auth.currentUser == null) {
-            setUser(null); 
-        }
-        else {
-            setUser(auth.currentUser)
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUser(user);
+        } else {
+            setUser(null);
         }
     });
 
     async function signIn() {
         router.push('/signIn')
+    }
+
+    async function createPost() {
+        router.push('/createPost')
     }
 
     return (
@@ -34,7 +37,12 @@ export default function HomePage() {
                 </div> 
                 : (
                     <div className={ styles.posts }>
-                        Here are the Travel Blog Posts for today!  
+                        <button onClick= { createPost }>
+                            Add post
+                        </button>
+                        <div>
+                            Here are the Travel Blog Posts for today!  
+                        </div>
                     </div>
                 )}
         </div>

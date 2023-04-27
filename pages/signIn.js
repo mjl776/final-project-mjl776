@@ -1,16 +1,19 @@
 import { useState } from "react"
 import { useRouter } from 'next/router'
-import authentication from "../firebase/firebase"
+import auth from "../firebase/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth"
+import styles from "../styles/auth.module.css"
+
 export default function SignIn() {
 
     const [getEmail, setEmail] = useState("");
     const [getPassword, setPassword] = useState("");
     const router = useRouter();
 
-    async function authenticate () {
+    async function authenticate(event) {
+        event.preventDefault();
         const user = await signInWithEmailAndPassword(
-            authentication,
+            auth,
             getEmail,
             getPassword
         ).then(() => {
@@ -19,9 +22,9 @@ export default function SignIn() {
     }
     
     return (
-        <div className = "form-container">
-            <form onSubmit={authenticate}>
-                <div className="sign-up-form">Sign In Form</div>
+        <div className = { styles["form-container"] }>
+            <form onSubmit={ authenticate }>
+                <div className={ styles["sign-up-form"] }>Sign In Form</div>
                 <input type="text" placeholder = "Email..."
                 onChange={(evt)=>{
                     setEmail(evt.target.value); 

@@ -1,7 +1,7 @@
 import auth from "../firebase/firebase"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
-import { createUserWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth"
 import styles from "../styles/auth.module.css"
 
 export default function Auth() {
@@ -13,16 +13,7 @@ export default function Auth() {
 
     // response variable for post request for users insert into db
     let response = null; 
-    const router = useRouter()
-
-    useEffect(() => {
-        if (auth.currentUser == null) {
-            setUser(null); 
-        }
-        else {
-            setUser(auth.currentUser)
-        }
-    });
+    const router = useRouter();
 
     async function signUp(event) {
         event.preventDefault();
@@ -32,7 +23,7 @@ export default function Auth() {
                 getEmail,
                 getPassword
             ).then(async () => {
-                response = await fetch("https://final-project-mjl776.vercel.app/api/signUpUser", {
+                response = await fetch("http://localhost:3000/api/signUpUser", {
                     method: "POST",
                     body: JSON.stringify({
                         getEmail,
@@ -43,7 +34,6 @@ export default function Auth() {
                     "Content-Type": "application/json",
                     },
                 })
-                console.log(response);
                 response = await response.json();
             }).then(() => {
                 router.push('/');
